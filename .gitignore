@@ -32,3 +32,4 @@
 
 # secret Keys
 .env
+node_modules
