@@ -104,6 +104,11 @@ rails s
 - GitHub: [@UbdaNam](https://github.com/UbdaNam)
 - LinkedIn: [Abdurahim M.](https://www.linkedin.com/in/abdurahim-miftah/)
 
+👤 **Wullah Jonas Nuta**
+
+- GitHub: [@jonas-45](https://github.com/jonas-45)
+- Twitter: [@jonaswullah](https://twitter.com/jonaswullah)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
