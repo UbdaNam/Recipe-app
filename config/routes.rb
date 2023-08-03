@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   get 'welcome', to: 'welcome#index', as: :welcome
   get 'foods', to: 'foods#index', as: :foods
   get 'foods/new', to: 'foods#new', as: :new_food
-  # post '/foods', to: 'foods#create'
+  post '/foods', to: 'foods#create'
 end
