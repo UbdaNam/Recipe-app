@@ -1,13 +1,17 @@
-/* Foods page style */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-.foods-container {
+.flex-column {
   display: flex;
   flex-direction: column;
+}
+
+/* Foods page style */
+
+.foods-container {
   padding: min(5vh, 2rem) min(7vw, 3rem);
   gap: 1.5rem;
 }
@@ -16,8 +20,11 @@
   align-self: flex-end;
 }
 
-.add-btn {
+.add-btn,
+.delete-btn {
   padding: 3px 5px;
+  border-radius: 7px;
+  cursor: pointer;
 }
 
 table {
@@ -40,6 +47,33 @@ table td {
 tbody tr:nth-child(odd) {
   background-color: #eee;
 }
+
 tbody tr:nth-child(even) {
   background-color: #fff;
+}
+
+.delete-btn {
+  border: none;
+  text-decoration: underline;
+  color: #0044cc;
+  background-color: transparent;
+}
+
+/* Add Food page style */
+
+.form-container {
+  gap: 1.5rem;
+  align-items: center;
+  margin: 2rem auto;
+}
+
+.food_create_form {
+  gap: 0.5rem;
+}
+
+.food_create_form input {
+  padding: 3px 6px;
+  border: 1px solid;
+  border-radius: 5px;
+  font-size: large;
 }

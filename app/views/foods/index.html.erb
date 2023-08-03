@@ -1,4 +1,4 @@
-<div class="foods-container">
+<div class="foods-container flex-column">
   <h1>Food List</h1>
   <%= link_to new_food_path do %>
     <button class="add-btn">Add Food</button> 
@@ -13,18 +13,14 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Apple</td>
-        <td>grams</td>
-        <td>$5</td>
-        <td>Delete</td>
-      </tr>
-      <tr>
-        <td>Apple</td>
-        <td>grams</td>
-        <td>$5</td>
-        <td>Delete</td>
-      </tr>
+      <% @foods.each do |food| %>
+        <tr>
+          <td><%= food.name%></td>
+          <td><%= food.measurement_unit%></td>
+          <td>$<%= food.price%></td>
+          <td><%= button_to "Delete", food, method: :delete, class: "delete-btn", data: {turbo_confirm: "Are you sure?"} %></td>
+        </tr>
+      <% end %>
     </tbody>
   </table>
 </div>

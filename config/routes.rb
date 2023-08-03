@@ -7,7 +7,5 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   get 'welcome', to: 'welcome#index', as: :welcome
-  get 'foods', to: 'foods#index', as: :foods
-  get 'foods/new', to: 'foods#new', as: :new_food
-  post '/foods', to: 'foods#create'
+  resources :foods, only: [:index, :new, :create, :destroy]
 end
