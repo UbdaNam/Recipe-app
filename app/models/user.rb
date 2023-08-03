@@ -7,4 +7,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :confirmable
 
   validates :name, presence: true
+
+  def owner?(recipe_id)
+    recipes.exists?(id: recipe_id)
+  end
 end
