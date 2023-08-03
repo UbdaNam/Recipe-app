@@ -4,5 +4,5 @@ class Food < ApplicationRecord
   has_many :recipes, through: :recipe_foods
 
   validates :name, :measurement_unit, :quantity, :price, presence: true
-  validates :quantity, :price, numericality: true , comparison: { greater_than_or_equal_to: 0 }
+  validates :quantity, :price, numericality: true, comparison: { greater_than_or_equal_to: 0 }
 end

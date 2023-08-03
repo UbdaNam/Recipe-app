@@ -24,5 +24,4 @@ class FoodsController < ApplicationController
   def food_params
     params.require(:food).permit(:name, :measurement_unit, :quantity, :price)
   end
-
 end
