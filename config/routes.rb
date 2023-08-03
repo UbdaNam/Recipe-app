@@ -7,5 +7,14 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   get 'welcome/index', to: 'welcome#index', as: :welcome
+  patch 'recipes/:id/update_public', to: 'recipes#update_public', as: 'recipe_update_public'
+
+  resources :recipes, only: %i[index show new create destroy] do
+    patch :update_public, on: :member
+  end
+
+  resources :shopping_lists, only: [:index]
+  resources :public_recipes, only: [:index]
+  resources :recipe_foods, only: %i[create new destroy], path: 'recipe_foods'
 
 end
