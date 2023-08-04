@@ -6,10 +6,7 @@
         <li><%= link_to 'Food', foods_path, class: "btn btn-outline-primary" %></li>
         <li><%= link_to 'My Recipes', recipes_path, class: "btn btn-outline-primary" %></li>
         <li><%= link_to 'Public Recipes', public_recipes_path, class: "btn btn-outline-primary" %></li>
-        <% if defined?(@recipe) && @recipe.persisted? %>
-          <li><%= link_to 'Shopping Lists', recipe_shopping_lists_path(@recipe), class: "btn btn-outline-primary" %></li>
-        <% end %>
-
+        <li><%= link_to 'Shopping Lists', shopping_list_path, class: "btn btn-outline-primary" %></li>
         <li><%= render partial: 'shared/logout' %></li>
       <% end %>
     </ul>

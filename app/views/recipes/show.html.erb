@@ -21,7 +21,7 @@
   </div>
   <br>
   <div class="d-flex justify-content-center">
-    <%= link_to 'Generate shopping list', shopping_lists_path(recipe_id: @recipe.id), class:"btn btn-success btn-lg mx-5" %>
+    <%= link_to 'Generate shopping list', shopping_list_path , class:"btn btn-success btn-lg mx-5" %>
     <% if current_user.owner? @recipe || @recipe.public === true%>
       <button class="btn btn-success btn-lg mx-5" >
         <%= link_to 'Add ingredient', new_recipe_food_path(recipe_id: @recipe.id),  class: "text-white text-decoration-none"  %>

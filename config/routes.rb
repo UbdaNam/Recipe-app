@@ -9,10 +9,7 @@ Rails.application.routes.draw do
     patch :update_public, on: :member
   end
 
-  resources :recipes do
-    resources :shopping_list, only: [:index]
-  end
-
+  resources :recipes
   resources :public_recipes, only: [:index]
   resources :recipe_foods, only: %i[create new destroy], path: 'recipe_foods'
   resources :foods, only: [:index, :new, :create, :destroy]
