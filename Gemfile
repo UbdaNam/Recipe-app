@@ -10,9 +10,9 @@ gem 'rails', '~> 7.0.6'
 gem 'rubocop', '>= 1.0', '< 2.0'
 
 # Bootstrap
-gem "jquery-rails"
-gem "bootstrap"
-gem "sassc-rails"
+gem 'bootstrap'
+gem 'jquery-rails'
+gem 'sassc-rails'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
