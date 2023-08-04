@@ -17,6 +17,18 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new
   end
 
+  def update_public
+    @recipe = Recipe.find(params[:id])
+
+    if @recipe.update(public: params[:recipe][:public] == '1')
+      flash[:notice] = 'Recipe public status sucessfully changed'
+    else
+      flash[:danger] = 'Sorry failed to change Recipe Public status!'
+    end
+
+    redirect_to request.referrer
+  end
+
   def create
     @recipe = current_user.recipes.build(recipe_params)
 
