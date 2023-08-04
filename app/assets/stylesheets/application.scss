@@ -68,7 +68,8 @@ ul {
 
 /* Foods page style */
 
-.foods-container {
+.foods-container,
+.shopping-list-cont {
   padding: calc(min(5vh, 2rem)) calc(min(7vw, 3rem));
   gap: 1.5rem;
 }
@@ -133,4 +134,14 @@ tbody tr:nth-child(even) {
   border: 1px solid;
   border-radius: 5px;
   font-size: large;
+}
+
+/* Shopping list page style */
+.shopping-list-cont {
+  align-items: center;
+}
+
+.total-desc {
+  display: flex;
+  gap: 1rem;
 }
