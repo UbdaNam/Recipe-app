@@ -1,15 +1,79 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Foods page style */
+
+.foods-container {
+  padding: calc(min(5vh, 2rem)) calc(min(7vw, 3rem));
+  gap: 1.5rem;
+}
+
+.foods-container > a {
+  align-self: flex-end;
+}
+
+.add-btn,
+.delete-btn {
+  padding: 3px 5px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px black solid;
+}
+
+table > thead {
+  background-color: #ccc;
+}
+
+table td {
+  border-left: 2px black solid;
+  border-right: 2px black solid;
+  padding: 10px;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #eee;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #fff;
+}
+
+.delete-btn {
+  border: none;
+  text-decoration: underline;
+  color: #04c;
+  background-color: transparent;
+}
+
+/* Add Food page style */
+
+.form-container {
+  gap: 1.5rem;
+  align-items: center;
+  margin: 2rem auto;
+}
+
+.food_create_form {
+  gap: 0.5rem;
+}
+
+.food_create_form input {
+  padding: 3px 6px;
+  border: 1px solid;
+  border-radius: 5px;
+  font-size: large;
+}

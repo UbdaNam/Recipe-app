@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root 'welcome#index'
 
-  get 'welcome/index', to: 'welcome#index', as: :welcome
-
+  get 'welcome', to: 'welcome#index', as: :welcome
+  resources :foods, only: [:index, :new, :create, :destroy]
 end
