@@ -1,3 +1,5 @@
+@import "bootstrap";
+
 * {
   padding: 0;
   margin: 0;
@@ -7,6 +9,61 @@
 .flex-column {
   display: flex;
   flex-direction: column;
+}
+
+.add-recipe-btn {
+  display: flex;
+  width: 25%;
+  justify-content: center;
+  margin: 1rem auto;
+}
+
+.button-container {
+  display: flex;
+}
+
+.recipe-form {
+  margin: 0 0 10px 0;
+}
+
+.public-check {
+  margin: 0 0 1rem 0;
+}
+
+.add-food-btn,
+.food-form,
+.login-form {
+  margin: 0 0 1rem 0;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin: 10rem 0;
+}
+
+.home-h1 {
+  margin: 0 0 2rem;
+}
+
+.name {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.recipe-app-btn {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+ul {
+  margin: 0.5rem 0;
+  gap: 5px;
 }
 
 /* Foods page style */
