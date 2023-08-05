@@ -107,7 +107,6 @@ rails s
 👤 **Wullah Jonas Nuta**
 
 - GitHub: [@jonas-45](https://github.com/jonas-45)
-- Twitter: [@jonaswullah](https://twitter.com/jonaswullah)
 - LinkedIn: [jonas-wullah](https://linkedin.com/in/jonas-wullah)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
