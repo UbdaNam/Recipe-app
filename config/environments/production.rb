@@ -64,6 +64,12 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
+  config.action_mailer.raise_delivery_errors = true
+
+  config.action_mailer.perform_deliveries = true
+
+  config.action_mailer.default_url_options = { host: 'https://recipe-app-43nq.onrender.com' }
+
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
@@ -92,5 +98,4 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # Set the default host for Devise mailer URLs
-  config.action_mailer.default_url_options = { host: 'example.com' }
 end
