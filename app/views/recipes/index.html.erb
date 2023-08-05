@@ -9,10 +9,11 @@
 <% else %>
 
   <% @recipes.each_with_index do |recipe, index| %>
-
-    <%= render partial: 'recipe', locals: { recipe: recipe, index: index } %>
-
+    <%= link_to recipe do %> 
+      <%= render partial: 'recipe', locals: { recipe: recipe, index: index } %>
+    <% end %>
   <% end %>
+
 
 <% end %>
 </div>
