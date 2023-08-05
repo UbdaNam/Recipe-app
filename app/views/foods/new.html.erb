@@ -1,0 +1,29 @@
+<div class="form-container flex-column">
+  <h2>Add New Food</h2>
+  <%= form_with model: @food, class: "food_create_form flex-column" do |form|%>
+    <% if @food.errors.any? %>
+      <% @food.errors.full_messages.each do |message| %>
+        <p><%= message %><p>
+      <% end %>
+    <% end %>
+    <div>
+      <%= form.text_field :name, placeholder: "Name" %>
+    </div>
+
+    <div>
+      <%= form.text_field :measurement_unit, placeholder: "Measurement Unit"%>
+    </div>
+
+    <div>
+      <%= form.text_field :quantity, placeholder: "Quantity" %>
+    </div>
+
+    <div>
+      <%= form.text_field :price, placeholder: "Price in USD" %>
+    </div>
+
+    <div>
+      <%= form.button "Create Food", class: "add-btn"%>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,147 @@
+@import "bootstrap";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-recipe-btn {
+  display: flex;
+  width: 25%;
+  justify-content: center;
+  margin: 1rem auto;
+}
+
+.button-container {
+  display: flex;
+}
+
+.recipe-form {
+  margin: 0 0 10px 0;
+}
+
+.public-check {
+  margin: 0 0 1rem 0;
+}
+
+.add-food-btn,
+.food-form,
+.login-form {
+  margin: 0 0 1rem 0;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin: 10rem 0;
+}
+
+.home-h1 {
+  margin: 0 0 2rem;
+}
+
+.name {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.recipe-app-btn {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+ul {
+  margin: 0.5rem 0;
+  gap: 5px;
+}
+
+/* Foods page style */
+
+.foods-container,
+.shopping-list-cont {
+  padding: calc(min(5vh, 2rem)) calc(min(7vw, 3rem));
+  gap: 1.5rem;
+}
+
+.foods-container > a {
+  align-self: flex-end;
+}
+
+.add-btn,
+.delete-btn {
+  padding: 3px 5px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px black solid;
+}
+
+table > thead {
+  background-color: #ccc;
+}
+
+table td {
+  border-left: 2px black solid;
+  border-right: 2px black solid;
+  padding: 10px;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #eee;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #fff;
+}
+
+.delete-btn {
+  border: none;
+  text-decoration: underline;
+  color: #04c;
+  background-color: transparent;
+}
+
+/* Add Food page style */
+
+.form-container {
+  gap: 1.5rem;
+  align-items: center;
+  margin: 2rem auto;
+}
+
+.food_create_form {
+  gap: 0.5rem;
+}
+
+.food_create_form input {
+  padding: 3px 6px;
+  border: 1px solid;
+  border-radius: 5px;
+  font-size: large;
+}
+
+/* Shopping list page style */
+.shopping-list-cont {
+  align-items: center;
+}
+
+.total-desc {
+  display: flex;
+  gap: 1rem;
+}
