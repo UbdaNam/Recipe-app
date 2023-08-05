@@ -5,7 +5,7 @@ class ShoppingListController < ApplicationController
     recipes = current_user.recipes.preload(:foods)
     food_list = current_user.foods
     @shopping_list = generate_shopping_list(recipes, food_list)
-    @total_quantity, @total_price = calculate_totals(@shopping_list)
+     @total_quantity, @total_price = calculate_totals(@shopping_list)
   end
 
   private
@@ -29,14 +29,14 @@ class ShoppingListController < ApplicationController
   
   def update_shopping_list(shopping_list, general_food, food, recipe_quantity)
     general_food ||= shopping_list.find { |f| f.id == food.id }
-    general_food[:quantity] -= (recipe_quantity * food[:quantity])
+    general_food[:quantity] -= recipe_quantity
     shopping_list << general_food unless shopping_list.include?(general_food)
   end
 
   def calculate_totals(shopping_list)
     negative_foods = shopping_list.select { |food| food.quantity < 0 }
-    total_quantity = negative_foods.sum(&:quantity).abs
-    total_price = negative_foods.sum { |food| food.quantity.abs * food.price }
+    total_quantity = negative_foods.length
+    total_price = negative_foods.sum { |food| food.price*=food.quantity.abs }
     [total_quantity, total_price]
   end
 end
