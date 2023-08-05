@@ -57,4 +57,7 @@ Rails.application.configure do
 
   # Annotate rendered view with file names.
   # config.action_view.annotate_rendered_view_with_filenames = true
+  
+  # Set the default host for Devise mailer URLs in the test environment
+  config.action_mailer.default_url_options = { host: 'test.example.com' }
 end

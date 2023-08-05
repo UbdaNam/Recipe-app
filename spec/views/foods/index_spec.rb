@@ -26,13 +26,13 @@ RSpec.describe 'foods/index', type: :feature do
 
     it 'has a button to add new food' do
       visit 'foods'
-      expect(page).to have_content 'Add New Food'
+      expect(page).to have_content 'Add Food'
     end
 
     it 'should take you to add food form when clicking on the button' do
       visit 'foods'
-      click_on 'Add New Food'
-      expect(current_path).to eql new_user_food_path(@user1)
+      click_link('Add Food')
+      expect(current_path).to eql new_food_path
     end
   end
 end
