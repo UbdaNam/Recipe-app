@@ -10,6 +10,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
@@ -51,7 +52,7 @@ A recipe web app is an online platform that provides users with a wide range of 
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://world-atlas-tj1z.onrender.com/)
+- [Live Demo Link](https://recipe-app-43nq.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -89,7 +90,7 @@ Install this project with: Any code editor or terminal which you are comfortable
 
 In the project directory, you can run:
 
-```Database
+```Create db
 rails db:create
 ```
 
